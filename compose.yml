@@ -1,0 +1,24 @@
+# ローカル開発環境一括起動用
+# usage: docker compose up -d
+
+services:
+  # API (FastAPI)
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/api:/app
+    # Dockerfile が未作成の場合は image + command で代替可能
+    # image: python:3.11-slim
+    # command: uvicorn main:app --host 0.0.0.0 --reload
+    # working_dir: /app
+    # volumes: ...
+
+  # Web (Remix) は Node でローカル実行が一般的なため、必要に応じて追加
+  # web:
+  #   build: ./apps/web
+  #   ports:
+  #     - "5173:5173"
