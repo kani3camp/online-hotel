@@ -1,0 +1,7 @@
+# OS / editor
+.DS_Store
+*.log
+
+# IDE (optional: remove if your team commits shared settings)
+.idea/
+.vscode/

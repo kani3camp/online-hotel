@@ -1,0 +1,27 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Env / secrets
+.env
+.env.*
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type check / lint cache
+.mypy_cache/
+.ruff_cache/
